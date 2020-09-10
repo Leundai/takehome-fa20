@@ -10,14 +10,14 @@ class Counter extends Component {
   }
   
   handleIncrement = () => {
+    if (this.state.count >= 0 && this.state.count < 10)
     this.setState((prevState) => ({count: prevState.count + 1}));
   }
 
   handleDecrement = () => {
-    if (this.state.count === 0 || this.state.count === 10) {
-      return;
+    if (this.state.count > 0 && this.state.count <= 10) {
+      this.setState((prevState) => ({count: prevState.count - 1}));
     }
-    this.setState((prevState) => ({count: prevState.count - 1}));
   }
 
   render() {
