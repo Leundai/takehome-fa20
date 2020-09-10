@@ -11,6 +11,7 @@ class Instructions extends Component {
         <p hidden={!this.props.complete}>
           Completed Part 1!
         </p>
+        <a href="https://youtu.be/42bTOKyrjw4" hidden={this.props.count !== 4} target="_blank" rel="noopener noreferrer">Secret Link</a>
       </div>
     )
   }

@@ -14,7 +14,7 @@ class Counter extends Component {
   }
 
   handleDecrement = () => {
-    if (this.state.count === 0) {
+    if (this.state.count === 0 || this.state.count === 10) {
       return;
     }
     this.setState((prevState) => ({count: prevState.count - 1}));
